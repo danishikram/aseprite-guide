@@ -1,14 +1,35 @@
-# 🎨 Compilación de Aseprite v1.3.4 en Windows / Building Aseprite v1.3.4 on Windows
+# 🎨 Compilación de Aseprite v1.3.4 en Windows / Building Aseprite v1.3.4 on Windows  
 
 Este documento explica paso a paso cómo compilar **Aseprite v1.3.4** en Windows.  
 This document explains step by step how to build **Aseprite v1.3.4** on Windows.  
 
 ---
 
-## 📋 Requisitos / Requirements
+## 📑 Índice / Index  
 
-- **Sistema / System:** Windows 10 o 11  
-- **Visual Studio:** 2022 Community con herramientas C++ / 2022 Community with C++ tools  
+1. [Español](#-español)  
+   - [Requisitos](#-requisitos)  
+   - [Descargas necesarias](#-descargas-necesarias)  
+   - [Activar entorno de Visual Studio](#️-activar-entorno-de-visual-studio)  
+   - [Preparar Skia](#-preparar-skia)  
+   - [Compilar Aseprite](#️-compilar-aseprite)  
+   - [Resultado final](#-resultado-final)  
+
+2. [English](#-english)  
+   - [Requirements](#-requirements)  
+   - [Required Downloads](#-required-downloads)  
+   - [Enable Visual Studio Environment](#️-enable-visual-studio-environment)  
+   - [Prepare Skia](#-prepare-skia)  
+   - [Build Aseprite](#️-build-aseprite)  
+   - [Final Result](#-final-result)  
+
+---
+
+# 🇪🇸 Español  
+
+## 📋 Requisitos  
+- **Sistema:** Windows 10 o 11  
+- **Visual Studio:** 2022 Community con herramientas C++  
 - **CMake:** v3.28.3 (⚠️ versión exacta requerida)  
 - **Ninja:** v1.11.1  
 - **Skia:** m102  
@@ -16,36 +37,28 @@ This document explains step by step how to build **Aseprite v1.3.4** on Windows.
 
 ---
 
-## 📂 Descargas necesarias / Required Downloads
-
-- **Aseprite v1.3.4 Código fuente / Source code**  
-  👉 [Aseprite v1.3.4 Release](https://github.com/aseprite/aseprite/releases/tag/v1.3.4)
+## 📂 Descargas necesarias  
+- **Aseprite v1.3.4 Código fuente**  
+  👉 [Aseprite v1.3.4 Release](https://github.com/aseprite/aseprite/releases/tag/v1.3.4)  
 
 - **Git**  
-  👉 [Download Git](https://git-scm.com/download/win)
+  👉 [Download Git](https://git-scm.com/download/win)  
 
 - **Visual Studio 2022 Community**  
-  👉 [Download Visual Studio](https://visualstudio.microsoft.com/downloads/)
+  👉 [Download Visual Studio](https://visualstudio.microsoft.com/downloads/)  
 
 - **CMake v3.28.3**  
-  👉 [Download CMake 3.28.3](https://github.com/Kitware/CMake/releases/tag/v3.28.3)
+  👉 [Download CMake 3.28.3](https://github.com/Kitware/CMake/releases/tag/v3.28.3)  
 
 - **Ninja Build v1.11.1**  
-  👉 [Download Ninja](https://github.com/ninja-build/ninja/releases/tag/v1.11.1)
+  👉 [Download Ninja](https://github.com/ninja-build/ninja/releases/tag/v1.11.1)  
 
 - **Skia m102**  
-  👉 [Download Skia m102](https://github.com/aseprite/skia/releases/tag/m102-861e4743af)
+  👉 [Download Skia m102](https://github.com/aseprite/skia/releases/tag/m102-861e4743af)  
 
 ---
 
-## ⚙️ Activar entorno de Visual Studio / Enable Visual Studio Environment
-
-Antes de compilar, activa el entorno de desarrollo de Visual Studio:  
-Before compiling, enable the Visual Studio development environment:  
-
-> **_⚠️ Nota / Note:_** 
-La ruta hace referencia a Visual Studio 2022. Ajusta si usas otra versión.
-This path refers to Visual Studio 2022. Adjust if you use another version.
+## ⚙️ Activar entorno de Visual Studio  
 
 ```bat
 call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
