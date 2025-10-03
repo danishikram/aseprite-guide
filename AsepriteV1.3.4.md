@@ -76,12 +76,6 @@ Extrae Skia en la ruta:
 C:\deps\skia
 ```
 
-Al final deberías tener:  
-
-```bat
-C:\deps\skia\out\Release-x64\skia.lib
-```
-
 ---
 
 ## 🖥️ Compilar Aseprite  
@@ -123,7 +117,7 @@ ninja aseprite
 El ejecutable estará en:  
 
 ```bat
-C:\Asepriteuildinseprite.exe
+C:\Aseprite\build\bin\aseprite.exe
 ```
 
 ¡Listo! 🎉 Ya tienes Aseprite v1.3.4 compilado.  
@@ -181,12 +175,6 @@ Extract Skia into the following path:
 C:\deps\skia
 ```
 
-At the end you should have:  
-
-```bat
-C:\deps\skia\out\Release-x64\skia.lib
-```
-
 ---
 
 ## 🖥️ Build Aseprite  
@@ -200,8 +188,8 @@ C:\Aseprite
 Create the `build` folder inside Aseprite:  
 
 ```bat
-mkdir C:\Asepriteuild
-cd C:\Asepriteuild
+mkdir C:\Aseprite\build
+cd C:\Aseprite\build
 ```
 
 Configure with CMake:  
