@@ -61,7 +61,7 @@ This document explains step by step how to build **Aseprite v1.3.4** on Windows.
 ## ⚙️ Activar entorno de Visual Studio  
 
 ```bat
-call "C:\Program Files\Microsoft Visual Studio2\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
+call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
 ```
 
 ⚠️ Nota: La ruta hace referencia a Visual Studio 2022. Ajusta si usas otra versión.  
@@ -160,7 +160,7 @@ C:\Aseprite\build\bin\aseprite.exe
 ## ⚙️ Enable Visual Studio Environment  
 
 ```bat
-call "C:\Program Files\Microsoft Visual Studio2\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
+call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
 ```
 
 ⚠️ Note: This path refers to Visual Studio 2022. Adjust if using another version.  
