@@ -61,46 +61,45 @@ This document explains step by step how to build **Aseprite v1.3.4** on Windows.
 ## ⚙️ Activar entorno de Visual Studio  
 
 ```bat
-call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
+call "C:\Program Files\Microsoft Visual Studio2\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
 ```
 
-📦 Preparar Skia / Prepare Skia
+⚠️ Nota: La ruta hace referencia a Visual Studio 2022. Ajusta si usas otra versión.  
 
-Descarga Skia m102 desde el enlace anterior.
-Download Skia m102 from the link above.
+---
 
-Extrae la carpeta en la siguiente ruta:
+## 📦 Preparar Skia  
+
+Extrae Skia en la ruta:  
 
 ```bat
 C:\deps\skia
 ```
 
-👉 Al terminar deberías tener:
-👉 At the end you should have:
+Al final deberías tener:  
 
 ```bat
 C:\deps\skia\out\Release-x64\skia.lib
 ```
 
-🖥️ Compilar Aseprite v1.3.4 / Build Aseprite v1.3.4
+---
 
-Descarga el código fuente de Aseprite (v1.3.4) y colócalo en:
-Download the Aseprite source code (v1.3.4) and place it in:
+## 🖥️ Compilar Aseprite  
+
+Descarga el código fuente de Aseprite (v1.3.4) y colócalo en:  
 
 ```bat
 C:\Aseprite
 ```
 
-Crea la carpeta build dentro de Aseprite:
-Create the build folder inside Aseprite:
+Crea la carpeta `build` dentro de Aseprite:  
 
 ```bat
 mkdir C:\Aseprite\build
 cd C:\Aseprite\build
 ```
 
-Configura el proyecto con CMake:
-Configure the project with CMake:
+Configura con CMake:  
 
 ```bat
 cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ^
@@ -111,24 +110,125 @@ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ^
  -G Ninja ..
 ```
 
-Compila con Ninja:
-Build with Ninja:
+Compila con Ninja:  
 
 ```bat
 ninja aseprite
 ```
-Resultado final / Final Result
 
-El ejecutable estará en:
-The executable will be in:
+---
 
+## 📂 Resultado final  
+
+El ejecutable estará en:  
 
 ```bat
-C:\Aseprite\build\bin\aseprite.exe
+C:\Asepriteuildinseprite.exe
 ```
 
-¡Listo! Ya tienes tu versión de Aseprite v1.3.4 compilada 🎨
-Done! You now have your compiled version of Aseprite v1.3.4 🎨
+¡Listo! 🎉 Ya tienes Aseprite v1.3.4 compilado.  
 
+---
 
-Guía adaptada y simplificada para v1.3.4
+# 🇬🇧 English  
+
+## 📋 Requirements  
+- **System:** Windows 10 or 11  
+- **Visual Studio:** 2022 Community with C++ tools  
+- **CMake:** v3.28.3 (⚠️ exact version required)  
+- **Ninja:** v1.11.1  
+- **Skia:** m102  
+- **Git**  
+
+---
+
+## 📂 Required Downloads  
+- **Aseprite v1.3.4 Source Code**  
+  👉 [Aseprite v1.3.4 Release](https://github.com/aseprite/aseprite/releases/tag/v1.3.4)  
+
+- **Git**  
+  👉 [Download Git](https://git-scm.com/download/win)  
+
+- **Visual Studio 2022 Community**  
+  👉 [Download Visual Studio](https://visualstudio.microsoft.com/downloads/)  
+
+- **CMake v3.28.3**  
+  👉 [Download CMake 3.28.3](https://github.com/Kitware/CMake/releases/tag/v3.28.3)  
+
+- **Ninja Build v1.11.1**  
+  👉 [Download Ninja](https://github.com/ninja-build/ninja/releases/tag/v1.11.1)  
+
+- **Skia m102**  
+  👉 [Download Skia m102](https://github.com/aseprite/skia/releases/tag/m102-861e4743af)  
+
+---
+
+## ⚙️ Enable Visual Studio Environment  
+
+```bat
+call "C:\Program Files\Microsoft Visual Studio2\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
+```
+
+⚠️ Note: This path refers to Visual Studio 2022. Adjust if using another version.  
+
+---
+
+## 📦 Prepare Skia  
+
+Extract Skia into the following path:  
+
+```bat
+C:\deps\skia
+```
+
+At the end you should have:  
+
+```bat
+C:\deps\skia\out\Release-x64\skia.lib
+```
+
+---
+
+## 🖥️ Build Aseprite  
+
+Download Aseprite v1.3.4 source code and place it in:  
+
+```bat
+C:\Aseprite
+```
+
+Create the `build` folder inside Aseprite:  
+
+```bat
+mkdir C:\Asepriteuild
+cd C:\Asepriteuild
+```
+
+Configure with CMake:  
+
+```bat
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ^
+ -DLAF_BACKEND=skia ^
+ -DSKIA_DIR=C:\deps\skia ^
+ -DSKIA_LIBRARY_DIR=C:\deps\skia\out\Release-x64 ^
+ -DSKIA_LIBRARY=C:\deps\skia\out\Release-x64\skia.lib ^
+ -G Ninja ..
+```
+
+Build with Ninja:  
+
+```bat
+ninja aseprite
+```
+
+---
+
+## 📂 Final Result  
+
+The executable will be located at:  
+
+```bat
+C:\Asepriteuildinseprite.exe
+```
+
+Done! 🎉 You now have your compiled version of Aseprite v1.3.4.  
