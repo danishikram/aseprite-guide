@@ -216,7 +216,7 @@ ninja aseprite
 The executable will be located at:  
 
 ```bat
-C:\Asepriteuildinseprite.exe
+C:\Aseprite\build\bin\aseprite.exe
 ```
 
 Done! 🎉 You now have your compiled version of Aseprite v1.3.4.  
